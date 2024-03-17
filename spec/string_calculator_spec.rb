@@ -10,8 +10,14 @@ RSpec.describe 'StringCalculator' do
     it "return 0 for empty string" do
      expect(add("")).to eq(0)
     end
+
     it "return the number itself for a single number" do
-    expect(add("1")).to eq(1)
+      expect(add("1")).to eq(1)
     end
+
+    it "returns the sum of numbers for comma separated numbers" do
+      expect(add("1,4")).to eq(5)
+    end
+
   end
 end
